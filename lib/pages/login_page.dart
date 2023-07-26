@@ -62,7 +62,7 @@ class _LoginPageState extends State<LoginPage> {
                 // ),
 
                 InkWell(
-                  onTap: () async{
+                  onTap: () async {
                     setState(() {
                       changeButton = true;
                     });
@@ -73,21 +73,27 @@ class _LoginPageState extends State<LoginPage> {
                   child: AnimatedContainer(
                     duration: const Duration(seconds: 1),
                     // color: Colors.deepPurple,
-                    width: changeButton?50 : 150,
+                    width: changeButton ? 50 : 150,
                     height: 50,
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
                         color: Colors.deepPurple,
                         // shape: changeButton?
                         // BoxShape.circle :BoxShape.rectangle,),
-                        borderRadius: BorderRadius.circular(changeButton ? 50: 8)),
-                    child: changeButton? const Icon(Icons.done , color: Colors.white,) : const Text(
-                      "Login",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18),
-                    ),
+                        borderRadius:
+                            BorderRadius.circular(changeButton ? 50 : 8)),
+                    child: changeButton
+                        ? const Icon(
+                            Icons.done,
+                            color: Colors.white,
+                          )
+                        : const Text(
+                            "Login",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18),
+                          ),
                   ),
                 )
               ],
